@@ -30,6 +30,7 @@ FEEDS = [
     "https://www.adweek.com/feed/",
     "https://marketingland.com/feed",
     "https://www.businessoffashion.com/feed/",
+    "http://feeds.harvardbusiness.org/harvardbusiness",
 ]
 
 CZECH_MONTHS = {
