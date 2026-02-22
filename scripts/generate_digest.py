@@ -27,13 +27,9 @@ ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 PERPLEXITY_API_KEY = os.environ.get("PERPLEXITY_API_KEY", "")
 
 FEEDS = [
-    "https://feeds.feedburner.com/MarketingWeekNews",
     "https://www.adweek.com/feed/",
-    "https://www.thedrum.com/rss",
-    "https://feeds.feedburner.com/campaignlive",
-    "https://contentmarketinginstitute.com/feed/",
     "https://marketingland.com/feed",
-    "https://www.marketingprofs.com/rss/articles.rss",
+    "https://www.businessoffashion.com/feed/",
 ]
 
 CZECH_MONTHS = {
