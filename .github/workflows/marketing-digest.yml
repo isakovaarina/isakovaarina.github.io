@@ -24,17 +24,17 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: Generate digest
-        run: python scripts/generate_digest.py
+        run: |
+          python scripts/generate_digest.py
+          echo "DIGEST_DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
 
       - name: Commit and push
-        run: |
-          git config user.name "digest-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git fetch origin main
-          git rebase origin/main
-          git add marketing-digest/ index.html
-          git diff --staged --quiet || git commit -m "digest: $(date +%Y-%m-%d)"
-          git push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "digest: ${{ env.DIGEST_DATE }}"
+          file_pattern: "marketing-digest/ index.html"
+          commit_user_name: digest-bot
+          commit_user_email: bot@users.noreply.github.com
