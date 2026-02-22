@@ -1,0 +1,36 @@
+name: Weekly Marketing Digest
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'   # každý pondělí 7:00 UTC
+  workflow_dispatch:        # možnost spustit ručně
+
+permissions:
+  contents: write
+
+jobs:
+  generate-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Generate digest
+        run: python scripts/generate_digest.py
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+
+      - name: Commit and push
+        run: |
+          git config user.name "digest-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add marketing-digest/ index.html
+          git diff --staged --quiet || git commit -m "digest: $(date +%Y-%m-%d)"
+          git push

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketing Digest archiv · Arina Isakova — týdenní přehled z marketingového světa" />
+  <title>Marketing Digest · Arina Isakova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #FAF8F5;
+      --bg-card: #F0EAE0;
+      --bg-card-hover: #E8DDD0;
+      --text: #1C1410;
+      --text-muted: #7A6A5A;
+      --accent: #C8A96E;
+      --accent-dark: #A8893E;
+      --border: #E2D8CC;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(250, 248, 245, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 8rem 2rem 6rem;
+    }
+
+    .digest-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .digest-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.1rem 1.5rem;
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .digest-item:hover {
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(200, 169, 110, 0.12);
+      border-color: var(--accent);
+    }
+
+    .digest-date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .digest-title {
+      flex: 1;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .digest-arrow {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .digest-coming-soon {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px dashed var(--border);
+      line-height: 1.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 700px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { gap: 1.25rem; }
+      main { padding: 6rem 1.25rem 4rem; }
+      .digest-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo">arina</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">← Zpět</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="section-label">Weekly Digest</p>
+    <h1 class="section-title">Marketing <em>Digest</em></h1>
+    <p style="color: var(--text-muted); margin-bottom: 3rem; max-width: 520px; font-size: 0.95rem; line-height: 1.8;">
+      Týdenní přehled z marketingového světa — novinky, virální kampaně, trendy a zajímavosti. Každé pondělí.
+    </p>
+
+    <!-- Tento seznam je automaticky přegenerován GitHub Actions -->
+    <div class="digest-list">
+      <p class="digest-coming-soon">
+        Zatím žádné digesty — první vyjde příští pondělí.<br>
+        Nebo spusť workflow ručně v GitHub Actions.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Arina Isakova &nbsp;·&nbsp; <a href="../index.html">Hlavní stránka</a></p>
+  </footer>
+
+</body>
+</html>

@@ -485,6 +485,69 @@
       font-size: 0.78rem;
     }
 
+    /* ─── DIGEST ─────────────────────────────────── */
+    .digest-cta {
+      margin-bottom: 2rem;
+    }
+
+    .digest-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: 2rem;
+    }
+
+    .digest-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.1rem 1.5rem;
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .digest-item:hover {
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(200, 169, 110, 0.12);
+      border-color: var(--accent);
+    }
+
+    .digest-date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      text-transform: uppercase;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .digest-title {
+      flex: 1;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .digest-arrow {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .digest-coming-soon {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 1.5rem;
+      text-align: center;
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px dashed var(--border);
+    }
+
     /* ─── FOOTER ──────────────────────────────────── */
     footer {
       text-align: center;
@@ -527,6 +590,12 @@
         grid-template-columns: 1fr;
       }
 
+      .digest-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+      }
+
       .hero {
         padding: 6rem 1.25rem 4rem;
       }
@@ -559,6 +628,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#connect">Connect</a></li>
+      <li><a href="#digest">Digest</a></li>
     </ul>
   </nav>
 
@@ -591,7 +661,7 @@
   <section id="about">
     <div class="section-inner">
       <p class="section-label">About</p>
-      <h2 class="section-title">Prague girl with a <em>camera</em><br>and an capuccino</h2>
+      <h2 class="section-title">Prague girl with a <em>camera</em><br>and an espresso</h2>
       <div class="about-grid">
         <div class="about-text">
           <p>
@@ -694,6 +764,27 @@
           TikTok&nbsp;<span class="handle">@isakovaa.a</span>
         </a>
       </div>
+    </div>
+  </section>
+
+  <div class="divider"><div class="divider-line"></div><div class="divider-dot"></div><div class="divider-line"></div></div>
+
+  <!-- DIGEST -->
+  <section id="digest">
+    <div class="section-inner">
+      <p class="section-label">Weekly Digest</p>
+      <h2 class="section-title">Marketing <em>týdne</em></h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 540px; font-size: 0.95rem; line-height: 1.8;">
+        Každý pondělí shrnu nejzajímavější marketingové novinky, virální kampaně a trendy — pohledem někoho, kdo marketing žije každý den.
+      </p>
+      <div class="digest-cta">
+        <a href="marketing-digest/index.html" class="btn btn-primary">Číst nejnovější digest →</a>
+      </div>
+      <!-- DIGEST_LIST_START -->
+      <div class="digest-list">
+        <p class="digest-coming-soon">První digest vychází brzy — sleduj a nezmeškej.</p>
+      </div>
+      <!-- DIGEST_LIST_END -->
     </div>
   </section>
 
