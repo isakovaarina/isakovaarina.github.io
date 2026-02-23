@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketing Digest 23. února 2026 · Arina Isakova" />
+  <title>Digest 23. února 2026 · Arina Isakova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAF8F5; --bg-card: #F0EAE0; --bg-card-hover: #E8DDD0;
+      --text: #1C1410; --text-muted: #7A6A5A; --accent: #C8A96E;
+      --accent-dark: #A8893E; --border: #E2D8CC; --white: #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(250,248,245,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--text); text-decoration: none; letter-spacing: 0.01em; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 2.5rem; }
+    .section-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+    .section-inner { max-width: 900px; margin: 0 auto; }
+    .digest-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .digest-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.1rem 1.5rem; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+    .digest-item:hover { transform: translateX(4px); box-shadow: 0 4px 16px rgba(200,169,110,0.12); border-color: var(--accent); }
+    .digest-date { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+    .digest-title { flex: 1; font-size: 0.9rem; color: var(--text-muted); }
+    .digest-arrow { color: var(--accent); flex-shrink: 0; }
+    .digest-coming-soon { font-size: 0.85rem; color: var(--text-muted); font-style: italic; padding: 1.5rem; text-align: center; background: var(--bg-card); border-radius: 12px; border: 1px dashed var(--border); }
+    footer { text-align: center; padding: 2.5rem 2rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.04em; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 700px) { nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; } .digest-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; } }
+    .digest-page { max-width: 720px; margin: 0 auto; padding: 7rem 2rem 5rem; }
+    .digest-page h2 { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .digest-page p { color: var(--text-muted); line-height: 1.85; margin-bottom: 1rem; font-size: 0.95rem; }
+    .digest-page strong { color: var(--text); }
+    .digest-page ul { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .digest-page li { padding: 0.3rem 0; color: var(--text-muted); line-height: 1.75; font-size: 0.95rem; }
+    .digest-page li::before { content: "·"; color: var(--accent); margin-right: 0.6rem; font-weight: bold; }
+    .digest-page a { color: var(--accent); text-decoration: none; }
+    .digest-page a:hover { text-decoration: underline; }
+    .digest-meta { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.06em; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    @media (max-width: 700px) { .digest-page { padding: 6rem 1.25rem 4rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">arina</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#digest">← Digest</a></li>
+    </ul>
+  </nav>
+
+  <main class="digest-page">
+    <p class="section-label">Weekly Digest</p>
+    <h1 class="section-title">Marketing <em>týdne</em></h1>
+    <p class="digest-meta">23. února 2026</p>
+    <h2>Top novinky týdne</h2>
+
+<p><strong>ChatGPT spouští reklamy – a první značky jsou tu</strong><br>
+Tohle je asi největší bomba tohoto týdne. Best Buy, Expedia a Enterprise Mobility patří mezi první inzerenty, jejichž reklamy se objevily přímo v ChatGPT. Analýza přes 500 promptů ukázala, že OpenAI zatím přistupuje k reklamnímu formátu velmi opatrně a konzervativně – ale směr je jasný. Pro nás marketéry to znamená, že se rodí úplně nový kanál, který bude potřeba sledovat velmi pozorně. Přemýšlela jsem nad tím celý den.</p>
+
+<p><strong>Dentsu a WPP tiše opustily The Trade Desk OpenPath</strong><br>
+Velká holdingy Dentsu a WPP se potichu odpojily od platformy OpenPath od The Trade Desk – důvodem jsou skryté poplatky a nedostatečná transparentnost. To je docela silný signál o tom, jaká napětí panují mezi velkými agenturními sítěmi a adtech platformami, které se stále agresivněji tlačí do supply chainu. Jestli vás zajímá programatická reklama, tohle rozhodně nezanedbávejte. <a href="https://www.adweek.com">Více na Adweek</a>.</p>
+
+<p><strong>Dept spouští globální content studio poháněné Adobe AI</strong><br>
+Agentura Dept přišla s odpovědí na rostoucí poptávku po obsahu – Dept Studios je jejich nový globální content hub integrující Adobe AI nástroje. Značky potřebují víc obsahu než kdy dřív, a agentury, které to nezaregistrují, budou brzy dost pozadu. Tohle je klasická ukázka toho, jak AI mění nejen workflow, ale i celou strukturu agenturních služeb.</p>
+
+<p><strong>Tarifní chaos v módním průmyslu pokračuje</strong><br>
+Americký Nejvyšší soud zrušil Trumpovy nouzové tarify, jenže den nato Trump oznámil nové – tentokrát ve výši 15 % místo původně avizovaných 10 %. Módní průmysl se zmítá v naprosté nejistotě, retailové asociace jako NRF volají po rychlém refundování cel a značky jako Saks Global řeší vlastní existenční problémy. Sledovat tohle z marketingového pohledu je fascinující – ukazuje to, jak moc geopolitika ovlivňuje brand strategie i zákaznické chování.</p>
+
+<h2>Virální reklamy & kampaně</h2>
+
+<p><strong>Goldfish, Folgers a LinkedIn – reklamy týdne podle Adweek</strong><br>
+Adweek tento týden vybral sedm kampaní, které stojí za pozornost, a já musím říct – Goldfish a Folgers mě fakt zaujaly. Goldfish vždycky umí ten mix nostalgie a hravosti, který funguje napříč generacemi, a Folgers je klasika, která zkrátka nikdy neumírá. LinkedIn v reklamní kreativě? To je taky zajímavý tah – platforma se evidentně snaží zbavit image "nudné pracovní sítě" a jde víc do emocí. <a href="https://www.adweek.com">Viz Adweek – Ads of the Week</a>.</p>
+
+<p><strong>Ulta Beauty vsází na positioning značky jako destinace</strong><br>
+Ulta Beauty spouští velkou brandovou hru – snaží se přebudovat svůj image z retaileru na skutečnou <em>brand destination</em>. Je to reakce na to, že beauty zákazníci jsou dnes méně loajální než kdy dřív a výrazně citlivější na cenu. Strategie Ulta je zajímavá tím, že místo bojování o nejnižší cenu vsází na kurátorský přístup a zážitek – uvidíme, jestli to bude stačit v době, kdy je každý na TikToku bombardovaný novými produkty každý den.</p>
+
+<p><strong>Amiri míří do Londýna – luxusní streetwear útočí na Bond Street</strong><br>
+LA značka Amiri, která loni překročila 300 milionů dolarů v tržbách, otevírá obchod na nejdražší nákupní třídě světa. Z marketingového hlediska je to zajímavý příběh o tom, jak streetwear buduje luxusní credibilitu – a jak důležitá je fyzická přítomnost i v době e-commerce. Founder Mike Amiri vsází na to, že blízkost Guccimu nebo Fendimu prostě dělá s vnímáním značky divy.</p>
+
+<h2>Trendy & insights</h2>
+
+<p><strong>Content marketing pozice se polarizují – a to radikálně</strong><br>
+Studie Semrush analyzovala přes 8 000 pracovních inzerátů a výsledek je dost znepokojivý: content role se rozdělují na dvě skupiny – hands-on kreativci (kteří píší, točí, editují) a senior growth owneři (kteří přemýšlejí strategicky a řídí výkon). Středová pozice "content marketér dělá všechno" pomalu mizí. Pokud jste teď někde uprostřed, možná je čas jasně se rozhodnout, která cesta je vaše. <a href="https://martech.org">Zdroj: MarTech</a>.</p>
+
+<p><strong>AI předbíhá agenturní smlouvy – a to je velký problém</strong><br>
+Survey data ukazují něco, co asi nepřekvapí, ale přesto je to varovné: AI mění agenturní workflow rychleji, než stačí být aktualizovány smlouvy, cenové modely a governance politiky. Většina agentur prostě ještě nemá vyřešené, jak fakturovat čas ušetřený AI nebo kdo nese odpovědnost za AI-generated obsah. Tohle bude jedním z klíčových témat celého roku 2026. <a href="https://martech.org">Více na MarTech</a>.</p>
+
+<p><strong>Google spouští no-code Scenario Planner na bázi Meridian MMM</strong><br>
+Google přišel s nástrojem, který umožňuje pracovat s Marketing Mix Modelingem bez nutnosti programovat – Scenario Planner je napojený na jejich open-source model Meridian a pomáhá s rozpočtovými rozhodnutími a ROI predikcemi. Pro marketéry v mid-size firmách, kde není datový tým, tohle může být game changer. Konečně MMM i pro "normální smrtelníky".</p>
+
+<p><strong>Vaše CRM ví o zákaznících víc než vaše persony</strong><br>
+Jeden z nejlepších insightů týdne: MarTech připomíná, že nejcennější zákaznická data nejsou v novém SaaS nástroji, ale přímo ve vašem CRM, v poznámkách customer success týmu a v systémech, které váš tým přestal pravidelně kontrolovat. Než kupovat další analytický nástroj, zkuste nejdřív pořádně projít to, co už máte. Tohle mi přišlo jako studená sprcha v tom dobrém smyslu.</p>
+
+<p><strong>Beauty průmysl opouští éru snadného růstu</strong><br>
+BoF upozorňuje, že beauty sales sice stále rostou, ale zákazníci jsou dnes value-conscious a méně loajální než kdy dřív. Velcí hráči musí přehodnocovat své strategie – ať už jde o pricing, brand story nebo distribuci. Tohle je signál nejen pro beauty, ale vlastně pro všechny kategorie FMCG: éra, kdy stačilo být prostě "na vlně", skončila.</p>
+
+<h2>Zajímavosti</h2>
+
+<p><strong>Build-A-Bear CEO: jak přejít z CMO na CEO a nepotápět značku</strong><br>
+Sharon Price John je CEO Build-A-Bear a svou cestu z marketingového křesla do toho nejvyššího popsala Adweeku fascinujícím způsobem. Říká, že klíčem nebyla síla nebo dominance, ale <em>softness</em> – schopnost naslouchat, vytvářet emocionální propojení a přenést brand z fyzických mall do digitálního světa. Je to super připomínka toho, že nejlepší CEO jsou často ti, kdo rozumí zákazníkovi – a to marketéři zpravidla umějí lépe než kdokoli jiný.</p>
+
+<p><strong>New York minimalisté vs. maximalistický trend</strong><br>
+BoF rozebírá zajímavé napětí ve fashion světě: značky postavené na newyorském minimalismu musí teď reagovat na návrat maximalismu a hlučnějších estetik. Z brandingového pohledu je to skvělá případová studie o tom, jak zůstat věrný své DNA a přitom se neodříznout od toho, co trh chce. Spoiler: řešení není "dělat víc hluku", ale najít bolder verzi sebe sama.</p>
+
+<p><strong>Stranger Things znovu na vrcholu streamingových žebříčků</strong><br>
+Pro ty z vás, kteří sledují streamingová čísla jako součást mediálního plánování – Stranger Things se vrátilo na první místo v týdnu 19. ledna, zatímco miniserie His & Hers spadla ze čísla jedna rovnou na čtyřku. Ukazuje to, jak volatilní streamingové publikum je a jak těžké je pro značky budovat konzistentní placement strategy na těchto platformách.</p>
+
+<p><strong>Loyalty program, který potěší i CFO</strong><br>
+MarTech přišel s praktickým frameworkem pro navrhování věrnostních programů pomocí AI promptů – bez šestimístného agenturního rozpočtu. Podstata je jednoduchá: než řešit, jakou odměnu zákazníkům nabídnete, musíte mít jasno v tom, <em>koho</em> chcete věrností vlastně získat a co to znamená pro váš P&L. Pokud zrovna přemýšlíte o spuštění nebo redesignu loyalty programu, tohle je povinná četba. <a href="https://martech.org">Zdroj: MarTech</a>.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Arina Isakova &nbsp;·&nbsp; <a href="../index.html">Zpět na hlavní stránku</a></p>
+  </footer>
+</body>
+</html>
