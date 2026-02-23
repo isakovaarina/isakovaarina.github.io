@@ -197,7 +197,7 @@ Piš přirozeně, osobně — jako UGC creatorka zaměřená na marketing.
 Pouze HTML tagy: <h2>, <p>, <strong>, <em>, <ul>, <li>, <a href="...">."""
 
     response = client.messages.create(
-        model="claude-opus-4-6",
+        model="claude-sonnet-4-6",
         max_tokens=4096,
         messages=[{"role": "user", "content": prompt}],
     )
