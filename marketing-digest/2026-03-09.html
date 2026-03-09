@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketing Digest 9. března 2026 · Arina Isakova" />
+  <title>Digest 9. března 2026 · Arina Isakova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAF8F5; --bg-card: #F0EAE0; --bg-card-hover: #E8DDD0;
+      --text: #1C1410; --text-muted: #7A6A5A; --accent: #C8A96E;
+      --accent-dark: #A8893E; --border: #E2D8CC; --white: #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(250,248,245,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--text); text-decoration: none; letter-spacing: 0.01em; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 2.5rem; }
+    .section-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+    .section-inner { max-width: 900px; margin: 0 auto; }
+    .digest-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .digest-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.1rem 1.5rem; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+    .digest-item:hover { transform: translateX(4px); box-shadow: 0 4px 16px rgba(200,169,110,0.12); border-color: var(--accent); }
+    .digest-date { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+    .digest-title { flex: 1; font-size: 0.9rem; color: var(--text-muted); }
+    .digest-arrow { color: var(--accent); flex-shrink: 0; }
+    .digest-coming-soon { font-size: 0.85rem; color: var(--text-muted); font-style: italic; padding: 1.5rem; text-align: center; background: var(--bg-card); border-radius: 12px; border: 1px dashed var(--border); }
+    footer { text-align: center; padding: 2.5rem 2rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.04em; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 700px) { nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; } .digest-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; } }
+    .digest-page { max-width: 720px; margin: 0 auto; padding: 7rem 2rem 5rem; }
+    .digest-page h2 { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .digest-page p { color: var(--text-muted); line-height: 1.85; margin-bottom: 1rem; font-size: 0.95rem; }
+    .digest-page strong { color: var(--text); }
+    .digest-page ul { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .digest-page li { padding: 0.3rem 0; color: var(--text-muted); line-height: 1.75; font-size: 0.95rem; }
+    .digest-page li::before { content: "·"; color: var(--accent); margin-right: 0.6rem; font-weight: bold; }
+    .digest-page a { color: var(--accent); text-decoration: none; }
+    .digest-page a:hover { text-decoration: underline; }
+    .digest-meta { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.06em; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    @media (max-width: 700px) { .digest-page { padding: 6rem 1.25rem 4rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">arina</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#digest">← Digest</a></li>
+    </ul>
+  </nav>
+
+  <main class="digest-page">
+    <p class="section-label">Weekly Digest</p>
+    <h1 class="section-title">Marketing <em>týdne</em></h1>
+    <p class="digest-meta">9. března 2026</p>
+    <h2>Top novinky týdne</h2>
+
+<p><strong>Jeff Green vsadil 148 milionů dolarů na vlastní firmu</strong><br>
+CEO The Trade Desk Jeff Green udělal něco, co se jen tak nevidí — investoval 148 milionů dolarů z vlastní kapsy do akcií své vlastní společnosti. A při té příležitosti si pěkně rýpl do Amazon DSP, což mu asi fanoušci v adtech odpustí. Je to jasný signál důvěry v programatický ekosystém mimo walled gardens, a mě osobně tohle gesto přijde mnohem přesvědčivější než jakýkoli earnings call. <a href="https://www.adweek.com">Adweek</a></p>
+
+<p><strong>DoorDash přichází o CMO po sedmi letech</strong><br>
+Kofi Amoo-Gottfried, jeden z nejvýraznějších CMO v americkém tech prostoru, po sedmi letech opouští DoorDash. Nástupce zatím nebyl jmenován, což je vždycky trochu nervózní situace — sedm let je v marketingu skoro věčnost a vybudovat takovou kontinuitu není jednoduché. Zajímavé bude sledovat, jakým směrem se brand vydá dál, protože Kofi DoorDash hodně definoval. <a href="https://www.adweek.com">Adweek</a></p>
+
+<p><strong>Beehiiv má prvního CMO v historii</strong><br>
+Newsletterová platforma Beehiiv přivedla Darrena Chaita, bývalého exekutiva z Calendly, jako svého vůbec prvního Chief Marketing Officera. Beehiiv cílí na 50 milionů dolarů v tržbách a chce budovat silnější brand identity — a první CMO je vždy velký moment. Pro nás, kteří žijeme newslettery, je to jasný důkaz, že email jako médium zažívá opravdovou renesanci. <a href="https://www.adweek.com">Adweek</a></p>
+
+<p><strong>Saks Global zavírá dalších 15 prodejen</strong><br>
+Luxusní retailer Saks Global, který dříve v letošním roce podal návrh na bankrot, ruší dalších 15 poboček jako součást restrukturalizace. Firma se soustředí na výnosnější, prémiové lokality. Je to smutný, ale typický příběh fyzického retailu v luxusním segmentu — přežijí jen ti, kdo dokážou nabídnout opravdový zážitek, ne jen produkt na poličce. <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<p><strong>Na světě nás opustila Dame Annette King</strong><br>
+Reklamní průmysl přišel o skutečnou legendu. Dame Annette King, průkopnická reklamní exekutiva, která zastávala vedoucí pozice v Accenture Song, Publicis i Ogilvy, zemřela ve věku 57 let. Její kolegové ji označují za „nezpochybnitelnou gigantku" oboru. Čest její památce — takoví lidé formují celé generace kreativců. <a href="https://www.adweek.com">Adweek</a></p>
+
+<h2>Virální reklamy & kampaně</h2>
+
+<p><strong>Ford se vrací do F1 a mění pravidla reklamního přerušení</strong><br>
+Ford je po více než 20 letech zpět na startovním roštu Formule 1 a oslavil to kampaní, která je doslova navržená pro streamingovou éru — docuseries, která přeruší klasický reklamní blok způsobem, který diváky nepřeskočí, ale naopak vtáhne. Je to přesně ten typ storytellingu, který dnes funguje: autentický, kontextový a formatově odvážný. Tohle je učebnicový příklad toho, jak dělat branded content správně. <a href="https://www.adweek.com">Adweek</a></p>
+
+<p><strong>Značky se předhánějí ve vzájemném pošťuchování — a sociální sítě to milují</strong><br>
+Tento týden Adweek rozebral trend, který sílí čím dál víc: značky otevřeně útočí na konkurenci a hrají na drzost. Ať už jde o jemné narážky nebo přímé srovnávání, publiku na sociálních sítích tento obsah zkrátka hraje. Jde o kombinaci entertaimentu a brandové odvahy — ale pozor, funguje to jen tehdy, když je to autentické a značka má dost silné vlastní identity, aby si troufla. <a href="https://www.adweek.com">Adweek</a></p>
+
+<p><strong>Ads of the Week: NPR, Mr. Clean, Heineken a další</strong><br>
+Adweek vybral 13 kampaní, které tento týden stojí za pozornost. Z výběru vyčnívají NPR, Mr. Clean nebo Heineken — každý z jiného důvodu, ale všechny ukazují, že kreativita v reklamě rozhodně není mrtvá. Pokud hledáte inspiraci nebo chcete sledovat, co se teď v kreativě děje, tahle pravidelná rubrika je skvělý rychlý přehled. <a href="https://www.adweek.com">Adweek</a></p>
+
+<p><strong>Dover Street Parfums Market otevřel pop-up spa v Paříži</strong><br>
+Kultovní retailer Dover Street Market expandoval do beauty space a debutoval se svým prvním skincare pop-upem v Paříži ve spolupráci s americkou značkou Monastery. Je to skvělý příklad toho, jak budovat brand experience offline — zákazníci si zaplatí za zážitek, ne jen za produkt. Experiential marketing v luxusním segmentu je zkrátka jiná liga. <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<h2>Trendy & insights</h2>
+
+<p><strong>Cookieless svět: konec "creepy" sledování, začátek skutečné důvěry</strong><br>
+Na březnové MarTech konferenci zaznělo něco, co stojí za zapamatování: konec cookies není katastrofa, ale příležitost vyměnit invazivní tracking za skutečný vztah s uživatelem. Clean rooms, real-time identity grafy a multi-ID ekosystémy mění způsob, jakým marketéři propojují zákaznická data. Pokud ještě nemáte strategii pro cookieless identitu, teď je nejvyšší čas. <a href="https://martech.org">MarTech</a></p>
+
+<p><strong>AI v marketingu: experimentujeme, ale ještě neumíme letět</strong><br>
+Nová analýza MarTech odhaluje nepříjemnou pravdu: většina marketingových týmů s AI pouze experimentuje, aniž by měla skutečnou strategii, školení nebo datovou infrastrukturu. Vedení tlačí na adopci, ale bez základů to nefunguje. Tohle rezonuje s tím, co slýchám od lidí v praxi skoro každý den — AI tools jsou sexy, ale bez procesu jsou jen drahá hračka. <a href="https://martech.org">MarTech</a></p>
+
+<p><strong>Organické vyhledávání se mění na kanál brandové důvěry</strong><br>
+SEO už dávno není jen o trafficu — stává se z něj nástroj budování brand authority. Podle MarTech analýzy rozhodují o úspěchu v search narativní kontrola, omnipresence a důvěryhodnost zdroje. A s nástupem AI search (ano, lidé se ptají ChatGPT místo Googlu) to platí dvojnásob. <a href="https://martech.org">MarTech</a></p>
+
+<p><strong>Proč váš outreach selže ještě předtím, než ho příjemce dočte</strong><br>
+MarTech se tento týden trefil do černého s analýzou, proč většina B2B outreachu nefunguje. Čitelnost, tón, kognitivní zátěž a výběr kanálu — to vše rozhoduje ještě před tím, než si příjemce přečte první větu. Pokud posíláte cold emaily nebo LinkedIn zprávy a nedostáváte odpovědi, přečtěte si to — je tam pár věcí, které se dají opravit rychle. <a href="https://martech.org">MarTech</a></p>
+
+<p><strong>Muji staví na skincare jako na svém dalším growth enginu</strong><br>
+Japonský retailer Muji vsadil na dostupnou skincare jako na svůj hlavní růstový motor — doma i v zahraničí. Je to zajímavý strategický move v době, kdy beauty segment roste a zákazníci hledají hodnotu bez kompromisů na kvalitě. Value-for-money positioning v skincare funguje a Muji to ví. <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<h2>Zajímavosti</h2>
+
+<p><strong>Ann Demeulemeester roste o 40 % — comeback roku v módě?</strong><br>
+Kultovní belgická značka Ann Demeulemeester pod vedením Stefana Galliciho zaznamenala 40% růst tržeb za loňský rok. Majitel Claudio Antonioli sází na pre-kolekce a nové obchody. Je to důkaz, že silný brand s jasnou identitou přežije i roky ticha — a pak se vrátí silnější. Pro marketéry je tohle krásná ukázka síly brand heritage. <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<p><strong>Zásobovací řetězec v módě opět pod tlakem — tentokrát kvůli Blízkému východu</strong><br>
+Konflikt na Blízkém východě žene ceny ropy na dvouletá maxima a zároveň způsobuje, že zásilky oblečení z Bangladéše a Indie uvízly na letištích, protože aerolinie ruší lety. Fast fashion retaileři to pocítí jako první. Pro markeťáky to připomíná, jak křehké jsou globální supply chainy a jak rychle se to promítne do dostupnosti produktů i cenové strategie. <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<p><strong>Hravost jako strategický záměr — lekce z Paris Fashion Week</strong><br>
+Na sedmý den Paris Fashion Week přinesl Duran Lantink pro Jean Paul Gaultier přesně to, co přehlídkám chybělo: smysl pro hru a radost. Business of Fashion to komentuje jako záměrný kreativní postoj — a já si myslím, že tohle platí i mimo módu. Hravost v komunikaci je underrated superschopnost každého brandu. <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<p><strong>Dostupnost jako growth driver za 18 bilionů dolarů</strong><br>
+MarTech publikoval tento týden zajímavý kus o accessibility marketingu — a číslo, které zaujme každého: globální trh lidí se zdravotním postižením a jejich blízkých představuje 18 bilionů dolarů v kupní síle. Přístupnost webu, obsahu a produktů přestává být jen etickou povinností a stává se měřitelnou konkurenční výhodou. Kdy naposledy jste auditovali přístupnost svého webu? <a href="https://martech.org">MarTech</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Arina Isakova &nbsp;·&nbsp; <a href="../index.html">Zpět na hlavní stránku</a></p>
+  </footer>
+</body>
+</html>
