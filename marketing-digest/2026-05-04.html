@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Marketing Digest 4. května 2026 · Arina Isakova" />
+  <title>Digest 4. května 2026 · Arina Isakova</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #FAF8F5; --bg-card: #F0EAE0; --bg-card-hover: #E8DDD0;
+      --text: #1C1410; --text-muted: #7A6A5A; --accent: #C8A96E;
+      --accent-dark: #A8893E; --border: #E2D8CC; --white: #FFFFFF;
+    }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(250,248,245,0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.15rem; color: var(--text); text-decoration: none; letter-spacing: 0.01em; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .section-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.15; margin-bottom: 2.5rem; }
+    .section-title em { font-style: italic; font-weight: 400; color: var(--accent); }
+    .section-inner { max-width: 900px; margin: 0 auto; }
+    .digest-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .digest-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.1rem 1.5rem; background: var(--bg-card); border-radius: 12px; border: 1px solid var(--border); text-decoration: none; color: var(--text); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+    .digest-item:hover { transform: translateX(4px); box-shadow: 0 4px 16px rgba(200,169,110,0.12); border-color: var(--accent); }
+    .digest-date { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+    .digest-title { flex: 1; font-size: 0.9rem; color: var(--text-muted); }
+    .digest-arrow { color: var(--accent); flex-shrink: 0; }
+    .digest-coming-soon { font-size: 0.85rem; color: var(--text-muted); font-style: italic; padding: 1.5rem; text-align: center; background: var(--bg-card); border-radius: 12px; border: 1px dashed var(--border); }
+    footer { text-align: center; padding: 2.5rem 2rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); letter-spacing: 0.04em; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 700px) { nav { padding: 1rem 1.25rem; } .nav-links { gap: 1.25rem; } .digest-item { flex-direction: column; align-items: flex-start; gap: 0.3rem; } }
+    .digest-page { max-width: 720px; margin: 0 auto; padding: 7rem 2rem 5rem; }
+    .digest-page h2 { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .digest-page p { color: var(--text-muted); line-height: 1.85; margin-bottom: 1rem; font-size: 0.95rem; }
+    .digest-page strong { color: var(--text); }
+    .digest-page ul { list-style: none; padding: 0; margin-bottom: 1rem; }
+    .digest-page li { padding: 0.3rem 0; color: var(--text-muted); line-height: 1.75; font-size: 0.95rem; }
+    .digest-page li::before { content: "·"; color: var(--accent); margin-right: 0.6rem; font-weight: bold; }
+    .digest-page a { color: var(--accent); text-decoration: none; }
+    .digest-page a:hover { text-decoration: underline; }
+    .digest-meta { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.06em; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    @media (max-width: 700px) { .digest-page { padding: 6rem 1.25rem 4rem; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">arina</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#digest">← Digest</a></li>
+    </ul>
+  </nav>
+
+  <main class="digest-page">
+    <p class="section-label">Weekly Digest</p>
+    <h1 class="section-title">Marketing <em>týdne</em></h1>
+    <p class="digest-meta">4. května 2026</p>
+    <h2>Top novinky týdne</h2>
+
+<p><strong>AI přebírá retail media — a CVS to dokazuje v praxi</strong><br>
+Tohle mě fakt zaujalo: retail media už dávno není jen „bannery v e-shopu". Podle nového materiálu z Adweeku ve spolupráci s CVS Media Exchange AI aktivně posouvá retail média blíž k samotnému momentu nákupu. Algoritmy teď dokážou zákazníkovi nabídnout správné sdělení v ten nejlepší možný okamžik — a to v reálném čase. Pro značky, které to ještě neřeší, je tohle budíček.</p>
+
+<p><strong>The Trade Desk vstupuje do onsite retail media pro Dollar General</strong><br>
+Adtech gigant The Trade Desk rozšiřuje pole působnosti a nově prodává onsite retail mediové reklamy přímo pro řetězec Dollar General. Přímý konkurent Criteo si tohle určitě nenechá líbit. Sleduju, jak se tento souboj bude vyvíjet — retail media prostě zažívá boom a každý kus koláče je teď o to cennější. Zdroj: <a href="https://www.adweek.com">Adweek</a></p>
+
+<p><strong>Chanel na vrcholu Lyst Indexu — Blazymania začíná</strong><br>
+Chanel s novým designérem Matthieu Blazym právě přistálo na prvním místě Lyst Indexu, a to po show v Biarritzu. Zájem o značku raketově roste a módní komunita mluví o tzv. „Blazymanii". Otázka zní: dokáže Chanel udržet tenhle hype dlouhodobě, nebo je to jen efektní vlna? Pro marketéry v luxusním segmentu je tohle perfektní case study toho, co dělá rebranding/redesign se sentimentem značky. Zdroj: <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<p><strong>Estée Lauder roste o 2 % díky parfémům, ale škrtá pracovní místa</strong><br>
+Parfémová divize Estée Lauder zachraňuje čísla — dvojciferný růst v tomto segmentu pomohl překrýt stagnaci v ostatních kategoriích. Zároveň firma pokračuje v propouštění jako součásti dlouhodobé restrukturalizace. Tohle je docela hořkosladká zpráva: vůně frčí, ale firma jako celek stále hledá stabilní půdu. Zdroj: <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<hr>
+
+<h2>Virální reklamy & kampaně</h2>
+
+<p><strong>Nike, Bostonský maraton a aspirace v roce 2026</strong><br>
+Nike se ocitl v ohni kritiky kvůli své kontroverzní reklamě na Bostonský maraton. Celá debata se točí kolem jedné zásadní otázky: jak prodávat aspiraci v době, kdy je americký trh hluboce politicky rozdělený? Krásná citace, která z toho vzešla: <em>„Exkluzivita by neměla být o vylučování lidí, ale o zvání těch správných."</em> Tohle by si měl přečíst každý brand stratég — trefuje se přímo do srdce toho, jak dnes funguje (nebo nefunguje) komunikace masových sportovních značek. Zdroj: <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<p><strong>Met Gala 2026: Jeff Bezos a Lauren Sánchez jako čestní předsedové</strong><br>
+Letošní Met Gala má nečekané hvězdy večera — a ne, nejsou to zpěváci. Jeff Bezos a Lauren Sánchez Bezos jako čestní předsedové vzbudili vlnu kontroverze ještě předtím, než akce vůbec začala. A Beyoncé se prý vrací po deseti letech. Z pohledu brand marketingu je fascinující sledovat, jak událost jako Met Gala funguje jako obří živý billboard — kdo se tam ukáže a v jakém kontextu, to se masivně propisuje do mediálního pokrytí značek. Zdroj: <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<p><strong>Amouage a luxusní zážitky: když nestačí jen produkt</strong><br>
+Parfémový dům Amouage uspořádal ve spolupráci s Business of Fashion večer věnovaný budoucnosti luxusu — od vizuálního symbolu k hlubokému emocionálnímu spojení. V době přesycení obsahem se luxusní značky čím dál více soustředí na smyslové a nezapomenutelné zážitky. Tohle není jen trendy téma — je to nutnost. Zdroj: <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<hr>
+
+<h2>Trendy & insights</h2>
+
+<p><strong>AI answer engines mění zákaznickou cestu — a nikdo na to není připravený</strong><br>
+ChatGPT a podobné AI answer enginy narušují customer journey způsoby, které jsme ještě před dvěma lety nedokázali předvídat. Zákazníci si místo Googlu ptají rovnou AI — a ta jim odpoví bez kliknutí na jediný odkaz. Pro značky to znamená obrovskou výzvu: jak být vidět tam, kde tradiční SEO přestává fungovat? Téma se řešilo na ADWEEK House Possible ve spolupráci s Brandwatch a myslím, že tohle bude <em>the</em> téma druhé poloviny roku. Zdroj: <a href="https://www.adweek.com">Adweek</a></p>
+
+<p><strong>AI nakupování naráží na strop důvěry</strong><br>
+Podle nového průzkumu z MarTechu většina spotřebitelů AI používá k průzkumu produktů — ale jakmile dojde na platby, zabrzdí. Důvěra v AI má jasný strop a ten strop se jmenuje „peníze". Marketéři by si z toho měli vzít ponaučení: AI jako průvodce nákupem? Ano. AI jako pokladní? Zatím ne. Zdroj: <a href="https://martech.org">MarTech</a></p>
+
+<p><strong>Proč stále věříme AI, i když si věci vymýšlí</strong><br>
+Tohle je jeden z těch článků, co mě donutily zastavit se a přemýšlet. Čím plynulejší a lidštější AI komunikuje, tím hůř rozpoznáváme tzv. halucinace — chvíle, kdy si AI prostě vymyslí fakt, který neexistuje. Pro marketéry zodpovědné za AI-generovaný obsah je tohle vážné varování: fluency ≠ accuracy. Zdroj: <a href="https://martech.org">MarTech</a></p>
+
+<p><strong>Affiliate marketing potřebuje lidi — i v éře AI</strong><br>
+Ať se nám to líbí nebo ne, AI mění affiliate marketing zásadním způsobem. Ale podle MarTechu jsou právě affiliate programy příkladem toho, kde lidská expertíza stále přináší lepší výsledky než čistá automatizace. Vztahy, kontext, kreativní úsudek — to jsou věci, které algoritmus zatím neumí nahradit. Zdroj: <a href="https://martech.org">MarTech</a></p>
+
+<p><strong>CEO jako marketér: nová definice leadershipu</strong><br>
+Adweek přináší zajímavý pohled na to, proč dnešní šéfové firem musí v první řadě myslet jako marketéři. Brand identity přestává být záležitostí marketingového oddělení — je to strategická priorita na úrovni boardroomu. Pokud CEO nerozumí značce, firma komunikuje nekonzistentně na všech úrovních. Zdroj: <a href="https://www.adweek.com">Adweek</a></p>
+
+<hr>
+
+<h2>Zajímavosti</h2>
+
+<p><strong>Coty vs. David Beckham: parfémová bitva u soudu</strong><br>
+Americká kosmetická firma Coty čelí žalobě od společnosti stojící za parfémem Davida Beckhama — důvodem jsou údajná závažná porušení licenční smlouvy. Tohle je připomínka, že celebrity licensing je byznys plný smluv, které se mohou kdykoliv zkomplikovat. A pro parfémový průmysl, který jinak zažívá boom, je to nepříjemný vzkaz: i ikony mají právníky. Zdroj: <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<p><strong>Adwoa Beauty jde do likvidace — lekce pro challenger značky</strong><br>
+Texaský soud rozhodl o přeměně bankrotového řízení značky Adwoa Beauty na Chapter 7 likvidaci. Smutná zpráva pro indie hair-care segment. Přitom právě tento týden vyšel na Adweeku materiál o tom, jak budovat CPG challenger brand — a případ Adwoa Beauty je bolestnou ilustrací toho, jak tenká je hranice mezi hype a životaschopností. Zdroj: <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+
+<p><strong>Konference Possible 2027 prodává sponzorství — ještě před koncem roku 2026</strong><br>
+Organizátoři konference Possible (vlastněné skupinou Hyve Group) tlačí stávající sponzory k podpisu smluv na rok 2027 — přičemž minimální vstupné začíná na 50 000 dolarech. Celé to působí trochu jako „rezervujte si místo nebo o něj přijdete". V marketingovém světě eventů je tohle odvážný tah, ale taky ukázka toho, jak velké akce pracují s psychologií nedostatku. Zdroj: <a href="https://www.adweek.com">Adweek</a></p>
+
+<p><strong>Dries Van Noten a manifest krásy v Benátkách</strong><br>
+Po odchodu ze své značky otevřel Dries Van Noten nadaci v benátském paláci — věnovanou řemeslu, kráse a věcem vyrobeným rukama a duší. V rozhovoru pro BoF řekl, že v ošklivých časech je tvorba něčeho krásného jedinou skutečnou formou protestu. Tohle není marketing ve striktním slova smyslu — ale je to přesně ten druh autentického storytellingu, po kterém každá značka touží. Zdroj: <a href="https://www.businessoffashion.com">Business of Fashion</a></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Arina Isakova &nbsp;·&nbsp; <a href="../index.html">Zpět na hlavní stránku</a></p>
+  </footer>
+</body>
+</html>
