@@ -1,8 +1,9 @@
 name: Weekly Marketing Digest
 
 on:
-  schedule:
-    - cron: '0 7 * * 1'   # každý pondělí 7:00 UTC
+  # schedule pozastaven — odkomentuj pro znovuzapnutí
+  # schedule:
+  #   - cron: '0 7 * * 1'   # každý pondělí 7:00 UTC
   workflow_dispatch:        # možnost spustit ručně
 
 permissions:
